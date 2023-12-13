@@ -1,0 +1,10 @@
+IMG_NAME=piclock
+PI_GEN_RELEASE="Raspberry Pi Studio Clock"
+TARGET_HOSTNAME=piclock-build
+TIMEZONE_DEFAULT=Europe/London
+FIRST_USER_NAME=piclock
+FIRST_USER_PASS=piclock
+APT_PROXY=http://localhost:3142
+DEPLOY_COMPRESSION=none
+DISABLE_FIRST_BOOT_USER_RENAME=1
+STAGE_LIST="stage0 stage1 stage2 piclock-customisations piclock-deployment"
