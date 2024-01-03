@@ -3,7 +3,7 @@
 export DEBIAN_FRONTEND=noninteractive
 export SUDO_FORCE_REMOVE=yes
 apt-get -y -f purge \
-	ssh sudo strace ed ncdu \
+	ssh openssh-server sudo strace ed ncdu \
 	build-essential manpages-dev bash-completion gdb pkg-config \
 	python-is-python3 \
 	v4l-utils \
