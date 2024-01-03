@@ -13,11 +13,9 @@ apt-get -y -f purge \
 	python3-spidev \
 	python3-smbus2 \
 	avahi-daemon \
-	lua5.1 \
 	luajit \
 	nfs-common usbutils \
 	libraspberrypi-dev libraspberrypi-doc libfreetype6-dev \
-	dosfstools \
 	dphys-swapfile \
 	pi-bluetooth \
 	apt-listchanges \

@@ -9,5 +9,5 @@ DEPLOY_COMPRESSION=none
 DISABLE_FIRST_BOOT_USER_RENAME=1
 #Only has an effect on the development build, as deployed build has the ssh server removed
 ENABLE_SSH=1
-#STAGE_LIST="stage0 stage1 stage2 piclock-customisations piclock-deployment"
-STAGE_LIST="stage0 stage1 stage2 piclock-customisations"
+STAGE_LIST="stage0 stage1 stage2 piclock-customisations piclock-deployment"
+#STAGE_LIST="stage0 stage1 stage2 piclock-customisations"
