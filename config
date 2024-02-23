@@ -2,10 +2,12 @@ IMG_NAME=piclock
 PI_GEN_RELEASE="Raspberry Pi Studio Clock"
 TARGET_HOSTNAME=piclock-build
 TIMEZONE_DEFAULT=Europe/London
+#Only does anything on the development build, this user is deleted from the deployed build
 FIRST_USER_NAME=clockadmin
 FIRST_USER_PASS=clockadmin
+#Comment out if you're not using apt proxy
 APT_PROXY=http://localhost:3142
-DEPLOY_COMPRESSION=none
+DEPLOY_COMPRESSION=gz
 DISABLE_FIRST_BOOT_USER_RENAME=1
 #Only has an effect on the development build, as deployed build has the ssh server removed
 ENABLE_SSH=1
