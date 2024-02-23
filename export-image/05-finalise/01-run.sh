@@ -10,6 +10,10 @@ update-initramfs -k all -c
 if [ -x /etc/init.d/fake-hwclock ]; then
 	/etc/init.d/fake-hwclock stop
 fi
+#Set cached clock to midnight
+if [ -f /etc/fake-hwclock.data ]; then
+	sed -i -e 's/..:..:../00:00:00/' /etc/fake-hwclock.data
+fi
 if hash hardlink 2>/dev/null; then
 	hardlink -t /usr/share/doc
 fi
