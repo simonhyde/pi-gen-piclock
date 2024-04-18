@@ -19,7 +19,7 @@ To install the required dependencies for `pi-gen` you should run:
 ```bash
 apt-get install coreutils quilt parted qemu-user-static debootstrap zerofree zip \
 dosfstools libarchive-tools libcap2-bin grep rsync xz-utils file git curl bc \
-gpg pigz
+gpg pigz xxd
 ```
 
 The file `depends` contains a list of tools needed.  The format of this
@@ -76,12 +76,6 @@ The following environment variables are supported:
    If you require the use of an apt proxy, set it here.  This proxy setting
    will not be included in the image, making it safe to use an `apt-cacher` or
    similar package for development.
-
-   If you have Docker installed, you can set up a local apt caching proxy to
-   like speed up subsequent builds like this:
-
-       docker-compose up -d
-       echo 'APT_PROXY=http://172.17.0.1:3142' >> config
 
  * `BASE_DIR`  (Default: location of `build.sh`)
 
