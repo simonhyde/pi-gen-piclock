@@ -33,6 +33,7 @@ apt-get -y -f purge \
 	file \
 	cifs-utils \
 	libcamera-apps-lite \
+	rpicam-apps-lite \
 	mkvtoolnix
 
 apt-get -y -f autopurge
