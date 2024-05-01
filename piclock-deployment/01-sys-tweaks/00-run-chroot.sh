@@ -9,7 +9,7 @@ apt-get -y -f purge \
 	v4l-utils \
 	python3-libgpiod \
 	python3-gpiozero \
-	pigpio python3-pigpio raspi-gpio python3-rpi.gpio \
+	pigpio python3-pigpio python3-rpi.gpio \
 	python3-spidev \
 	python3-smbus2 \
 	avahi-daemon \
@@ -21,9 +21,7 @@ apt-get -y -f purge \
 	apt-listchanges \
 	usb-modeswitch \
 	libpam-chksshpwd \
-	rpi-update \
 	libmtp-runtime \
-	rsync \
 	man-db \
 	ssh-import-id \
 	ntfs-3g \
