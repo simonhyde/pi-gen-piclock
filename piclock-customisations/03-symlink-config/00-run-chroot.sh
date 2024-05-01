@@ -8,6 +8,8 @@ if [ ! -d "$SD_CFG_DIR" ]; then
 fi
 
 for a in ntpsec/ntp.conf piclock.cfg network/interfaces.d/wired-network.conf; do
-	mv "/etc/$a" "$SD_CFG_DIR"
-	ln -s "$SD_CFG_DIR/$(basename "$a")" "/etc/$a"
+	if [ ! -L "/etc/$a" ]; then
+		mv "/etc/$a" "$SD_CFG_DIR"
+		ln -s "$SD_CFG_DIR/$(basename "$a")" "/etc/$a"
+	fi
 done

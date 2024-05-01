@@ -1,9 +1,11 @@
 #!/bin/bash -e
 
-cp /etc/adduser.conf /tmp/adduser.conf
-echo "USERGROUPS=no" >> /tmp/adduser.conf
-adduser piclock --conf /tmp/adduser.conf --disabled-password --comment piclock
-rm /tmp/adduser.conf
+if ! grep -q '^piclock:' /etc/passwd; then
+	cp /etc/adduser.conf /tmp/adduser.conf
+	echo "USERGROUPS=no" >> /tmp/adduser.conf
+	adduser piclock --conf /tmp/adduser.conf --disabled-password --comment piclock
+	rm /tmp/adduser.conf
+fi
 cat <<EOF > /home/piclock/.bashrc
 rm -f /tmp/piclock_clean_exit
 
