@@ -1,0 +1,13 @@
+[Unit]
+Before=network-pre.target
+Wants=network-pre.target
+After=local-fs.target
+DefaultDependencies=false
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/autohostname.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=network.target

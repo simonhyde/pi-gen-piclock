@@ -1,3 +1,4 @@
 #!/bin/bash -e
 
-install -m 644 files/resolv.conf "${ROOTFS_DIR}/etc/"
+#Disabled for PiClock build, as this overwrites reoslvconf symlink for dynamic resolv.conf
+#install -m 644 files/resolv.conf "${ROOTFS_DIR}/etc/"
