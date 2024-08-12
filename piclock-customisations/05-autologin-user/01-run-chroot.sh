@@ -4,6 +4,8 @@ if ! grep -q '^piclock:' /etc/passwd; then
 	cp /etc/adduser.conf /tmp/adduser.conf
 	echo "USERGROUPS=no" >> /tmp/adduser.conf
 	adduser piclock --conf /tmp/adduser.conf --disabled-password --comment piclock
+	#For GPI/O access
+	adduser piclock spi
 	rm /tmp/adduser.conf
 fi
 cat <<EOF > /home/piclock/.bashrc
