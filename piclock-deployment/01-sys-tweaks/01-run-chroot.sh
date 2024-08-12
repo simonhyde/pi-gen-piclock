@@ -3,4 +3,5 @@
 
 systemctl disable resize2fs_once
 
-systemctl disable sshswitch
+#This service doesn't seem to exist on this buld anymore, so this was erroring
+systemctl disable sshswitch || true
