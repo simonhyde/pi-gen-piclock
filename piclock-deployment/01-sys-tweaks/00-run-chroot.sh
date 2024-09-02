@@ -3,7 +3,7 @@
 export DEBIAN_FRONTEND=noninteractive
 export SUDO_FORCE_REMOVE=yes
 apt-get -y -f purge \
-	ssh openssh-server openssh-client sudo strace ed ncdu \
+	ssh openssh-server openssh-client strace ed ncdu \
 	build-essential manpages-dev bash-completion gdb pkg-config \
 	python-is-python3 \
 	v4l-utils \
@@ -14,7 +14,7 @@ apt-get -y -f purge \
 	python3-smbus2 \
 	avahi-daemon \
 	luajit \
-	nfs-common usbutils \
+	nfs-common \
 	libraspberrypi-dev libraspberrypi-doc libfreetype6-dev \
 	dphys-swapfile \
 	pi-bluetooth \
@@ -25,7 +25,6 @@ apt-get -y -f purge \
 	man-db \
 	ssh-import-id \
 	ntfs-3g \
-	pciutils \
 	udisks2 \
 	unzip zip p7zip-full \
 	file \
