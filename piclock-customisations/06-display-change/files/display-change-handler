@@ -1,0 +1,4 @@
+#!/bin/sh
+
+#Whenever display changes kill all Xorg sessions, they should then be auto-restarted
+killall Xorg
